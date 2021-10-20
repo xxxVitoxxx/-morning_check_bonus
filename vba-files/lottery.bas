@@ -7,8 +7,8 @@ Public  Sub 指定计算()
     Dim x As Integer
     x = Sheets("A抽獎").[N15]
     Set LostDic = CreateObject("SCRIPTING.DICTIONARY")
-    Lost = Sheets("忒耀啣").[A1].CurrentRegion
-    nia = Application.Match("魂意", Sheets("A抽獎").Columns("N"), 0) + 1
+    Lost = Sheets("手數模板").[A1].CurrentRegion
+    nia = Application.Match("活動品種", Sheets("A抽獎").Columns("N"), 0) + 1
     nin = Sheets("A抽獎").Cells(Rows.Count, "N").End(xlUp).Row
     syarr = Sheets("A抽獎").Range("N" & nia & ":N" & nin)
 
@@ -19,7 +19,7 @@ Public  Sub 指定计算()
         End If
         Next j
     Next i
-    
+
     ReDim LOSTarr(1 To LostDic.Count, 1 To 4)
     Itemm = LostDic.Keys
     For i = 0 To UBound(LOSTarr) - 1
@@ -86,10 +86,10 @@ Public  Sub acetopRecord()
     Call RECORDDD
     Sheets("A抽獎").Select
     Dim rnu1, rnu2 As Integer, Bonus
-    rnu1 = Sheets("贈金紀錄").Cells(1, 2).End(xlDown).Row
-    rnu2 = Sheets("贈金紀錄").Cells(Rows.Count, 2).End(xlUp).Row
+    rnu1 = Sheets("赠金紀錄").Cells(1, 2).End(xlDown).Row
+    rnu2 = Sheets("赠金紀錄").Cells(Rows.Count, 2).End(xlUp).Row
     Set BonusDic = CreateObject("SCRIPTING.DICTIONARY")
-    Bonus = Sheets("贈金紀錄").Range("B" & rnu1 & ":W" & rnu2)
+    Bonus = Sheets("赠金紀錄").Range("B" & rnu1 & ":W" & rnu2)
     For i = 1 To UBound(Bonus)
         BonusDic(Bonus(i, 8) & Bonus(i, 22)) = BonusDic(Bonus(i, 8) & Bonus(i, 22)) + Bonus(i, 11)
     Next i

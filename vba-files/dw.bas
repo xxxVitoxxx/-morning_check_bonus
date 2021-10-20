@@ -1,8 +1,8 @@
 Attribute VB_Name = "DW"
 
 Public  Sub dwRecord()
-    Sheets("贈金紀錄").Select
-    Sheets("贈金紀錄").Range("A1").Select
+    Sheets("赠金紀錄").Select
+    Sheets("赠金紀錄").Range("A1").Select
     Selection.PasteSpecial Paste:=xlPasteValues, Operation:=xlNone, SkipBlanks _
         :=False, Transpose:=False
     On Error Resume Next
@@ -10,7 +10,7 @@ Public  Sub dwRecord()
     Selection.NumberFormatLocal = "G/通用格式"
     On Error GoTo 0
     Dim Drecord, DW, Ndw()
-    Drecord = Sheets("贈金紀錄").[A1].CurrentRegion
+    Drecord = Sheets("赠金紀錄").[A1].CurrentRegion
     'vitonu = Sheets("贈金紀錄").Cells(Rows.Count, 1).End(xlUp).Row
     'Drecord = Sheets("贈金紀錄").Range("A1:V" & vitonu)
     Set DWDic = CreateObject("SCRIPTING.DICTIONARY")
@@ -101,5 +101,5 @@ End Function
 Public  Sub dwDelete()
     Sheets("DW").Range("A:H").ClearContents
     Sheets("DW").Range("A:H").ClearContents
-    Sheets("贈金紀錄").Cells.ClearContents
+    Sheets("赠金紀錄").Cells.ClearContents
 End Sub

@@ -57,7 +57,7 @@ Public  Sub bonus()
         Range("A2:E2").Resize(UBound(NewR)) = NewR
         [A1] = "交易帳號"
         [B1] = "服务器"
-        [C1] = "贈金模板金額"
+        [C1] = "赠金模板金額"
         [D1] = "赠金类型"
         [E1] = "MetaTrader备注"
     End If
@@ -65,7 +65,7 @@ Public  Sub bonus()
 End Sub
 
 Public  Sub record()
-    Sheets("贈金紀錄").Select
+    Sheets("赠金紀錄").Select
     Range("A1").Select
     ActiveSheet.PasteSpecial Format:="HTML", Link:=False, DisplayAsIcon:= _
         False, NoHTMLFormatting:=True

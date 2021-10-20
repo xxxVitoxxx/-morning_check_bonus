@@ -177,9 +177,9 @@ Public  Sub failPay()
         Next i
         Sheets("注資不成功").[G1] = "日期"
         Sheets("注資不成功").[H1] = D
-        Sheets("注資不成功").[G2] = "交易帳?"
+        Sheets("注資不成功").[G2] = "交易帳號"
         Sheets("注資不成功").[H2] = "姓名"
-        Sheets("注資不成功").[I2] = "會員帳?"
+        Sheets("注資不成功").[I2] = "會員帳號"
         Sheets("注資不成功").[J2] = "失敗次數"
         Sheets("注資不成功").Range("G3:J3").Resize(UBound(mt4arr)) = mt4arr '注資不成功
     End If
