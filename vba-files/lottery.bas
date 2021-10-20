@@ -19,6 +19,7 @@ Public  Sub 指定计算()
         End If
         Next j
     Next i
+    
     ReDim LOSTarr(1 To LostDic.Count, 1 To 4)
     Itemm = LostDic.Keys
     For i = 0 To UBound(LOSTarr) - 1
